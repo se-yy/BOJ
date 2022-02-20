@@ -18,19 +18,20 @@ public class S4_1620 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		String[] pkm = new String[N];
-		for (int i = 0; i < N; i++)
+		String[] pkm = new String[N+1];
+		for (int i = 1; i <= N; i++)
 			pkm[i] = br.readLine();
 		
 		String q;
 		for (int i = 0; i < M; i++) {
 			q = br.readLine();
 			if (isNum(q)) { // 숫자일때
-				sb.append(pkm[Integer.parseInt(q)-1]).append("\n");
+				int n = Integer.parseInt(q);
+				sb.append(pkm[n]).append("\n");
 			} else { // 문자일때
-				for (int j = 0; j < N; j++) {
+				for (int j = 1; j <= N; j++) {
 					if (q.equals(pkm[j])) {
-						sb.append(j+1).append("\n");
+						sb.append(j).append("\n");
 						break;
 					}
 				}
@@ -43,13 +44,11 @@ public class S4_1620 {
 		br.close();
 	}
 	static boolean isNum(String s) {
-		boolean res = true;
-		for (int i = 0; i < s.length(); i++) {
-			if (!Character.isDigit(s.charAt(i))) {
-				res = false;
-				break;
-			}
-		}
+		boolean res = false;
+		
+		char c = s.charAt(0);
+		if (c>='1' && c<='9')
+			res = true;
 		
 		return res;
 	}
