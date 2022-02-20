@@ -1,4 +1,4 @@
-package ssafy.com.Feb3;
+
 
 import java.util.Scanner;
 

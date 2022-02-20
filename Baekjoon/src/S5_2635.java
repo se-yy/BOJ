@@ -1,4 +1,4 @@
-package ssafy.com.Feb11;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
