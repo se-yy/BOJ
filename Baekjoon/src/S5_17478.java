@@ -4,7 +4,6 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class S5_17478 {
-	
 	static int n;
 	static StringBuilder sb = new StringBuilder();
 	static String[] s = {"\"재귀함수가 뭔가요?\"", 
